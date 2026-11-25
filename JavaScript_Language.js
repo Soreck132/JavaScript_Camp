@@ -390,7 +390,63 @@ if (errors.length) {
 
 
 //4.7 Terse if: Ternaries
+
+var animal = "cat";
+// animal = 'dog';
+
+animal === "cat"
+  ? console.log("You will be a cat herder.")
+  : console.log("You will be a dog catcher.");
+
+var job = animal === "cat" ? "cat herder" : "dog catcher";
+
+// prettier-ignore
+var job = (animal === "cat") ? "cat herder" : "dog catcher";
+
+// More info:
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#if...else_statement
+//
+// Truthy and falsy values are discussed here:
+// https://developer.mozilla.org/en-US/docs/Glossary/Truthy
+//
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
+
+
 //4.8 Type Checking
+
+var thing = 12;
+thing = "twelve";
+typeof thing;
+
+thing = 12;
+typeof thing;
+
+thing = false;
+typeof thing;
+
+thing = {};
+typeof thing;
+
+thing = [];
+typeof thing;
+typeof thing === "object" && thing.hasOwnProperty("length"); // true
+
+thing = {};
+typeof thing === "object" && thing.hasOwnProperty("length"); // false
+
+NaN;
+typeof NaN;
+Number.isNaN();
+
+typeof null;
+thing === null;
+thing = null;
+thing === null;
+
+let somethingLater;
+typeof somethingLater;
+typeof nothingSilly;
+
 
 // #################### 5.- Iterating with loops ################
 
